@@ -18,6 +18,12 @@
     <RepositoryUrl>https://github.com/sprache/Sprache</RepositoryUrl>
   </PropertyGroup>
 
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <SignAssembly>True</SignAssembly>
+    <AssemblyOriginatorKeyFile>Sprache.snk</AssemblyOriginatorKeyFile>
+    <DefineConstants>SIGN;$(DefineConstants)</DefineConstants>
+  </PropertyGroup>
+
   <ItemGroup Condition=" '$(TargetFramework)' == 'sl5' ">
     <Reference Include="System" />
     <Reference Include="System.Core" />
